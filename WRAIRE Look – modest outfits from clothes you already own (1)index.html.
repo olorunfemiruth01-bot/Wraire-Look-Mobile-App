@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WRAIRE Look – modest outfits from clothes you already own</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Courgette&family=Geist+Mono:wght@400;500&family=Montserrat+Alternates:wght@400;500;600;700&family=Rethink+Sans:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --dusty-grape:#564787;--thistle:#DBCBD8;--azure-mist:#F2FDFF;--evergreen:#17301C;--prussian-blue:#101935;
+ --bg:var(--azure-mist);--surface:#fff;--ink:var(--prussian-blue);--muted:#4b5272;--primary:var(--dusty-grape);--on-primary:#fff;
+ --soft:#ECE3EC;--line:#cfc3d3;--deep:var(--prussian-blue);--on-deep:var(--azure-mist);--ok:var(--evergreen);
+ --glass:rgba(255,255,255,.62);
+ --display:"Montserrat Alternates",system-ui,sans-serif;--body:"Rethink Sans",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;--script:"Courgette",cursive;--logo:"Comfortaa",sans-serif;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1128;--surface:#172044;--ink:var(--azure-mist);--muted:#b4bad3;--primary:var(--thistle);--on-primary:var(--prussian-blue);--soft:#1F2A55;--line:#33407a;--deep:#070B1C;--glass:rgba(23,32,68,.7);--ok:#9BD3A5}}
+:root[data-theme="dark"]{--bg:#0B1128;--surface:#172044;--ink:var(--azure-mist);--muted:#b4bad3;--primary:var(--thistle);--on-primary:var(--prussian-blue);--soft:#1F2A55;--line:#33407a;--deep:#070B1C;--glass:rgba(23,32,68,.7);--ok:#9BD3A5}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);padding-bottom:84px}
+h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(34px,9vw,68px);font-weight:700}
+h2{font-size:clamp(24px,5vw,36px);font-weight:600}
+h3{font-size:18px;font-weight:600}
+p{margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 18px}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-size:13px}
+/* header + nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 20px var(--logo);letter-spacing:.14em;text-decoration:none;color:var(--ink);background:none;border:0;cursor:pointer;padding:0}
+.logo i{font:400 19px var(--script);letter-spacing:0;color:var(--primary);margin-left:6px}
+.dn{display:none;gap:4px}
+.nb{border:0;background:none;cursor:pointer;padding:8px 14px;border-radius:999px;font-weight:500;color:var(--muted)}
+.nb[aria-current="page"]{background:var(--primary);color:var(--on-primary)}
+.bn{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;justify-content:space-around;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+.bn .nb{flex:1;padding:10px 4px;font-size:13px;border-radius:14px}
+.tbtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;cursor:pointer;font-size:13px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:14px 26px;font:600 16px var(--body);cursor:pointer;background:var(--primary);color:var(--on-primary);text-decoration:none;min-height:48px}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.sm{padding:8px 16px;min-height:38px;font-size:14px}
+.btn.full{width:100%}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(90% 60% at 85% 10%,var(--thistle),transparent 60%),radial-gradient(70% 60% at 0% 90%,rgba(86,71,135,.55),transparent 65%),var(--azure-mist);color:var(--prussian-blue);padding:34px 0 48px}
+.hero .wrap{display:grid;gap:28px}
+.hero p.lead{font-size:18px;max-width:46ch;margin:16px 0 24px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .btn.alt{color:var(--prussian-blue);border-color:var(--prussian-blue)}
+.hero .btn:not(.alt){background:var(--dusty-grape);color:#fff}
+.stage{position:relative;max-width:360px;margin:0 auto;width:100%}
+.arch{aspect-ratio:3/4;border-radius:999px 999px 28px 28px;background:linear-gradient(160deg,rgba(255,255,255,.75),rgba(219,203,216,.8) 55%,rgba(86,71,135,.45));border:1px solid rgba(255,255,255,.8);display:grid;place-items:end center;overflow:hidden;box-shadow:0 20px 50px rgba(16,25,53,.18)}
+.arch svg{width:78%;height:auto;margin-bottom:4%}
+.tag{position:absolute;background:rgba(255,255,255,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:16px;padding:8px 12px;font-size:13px;color:var(--prussian-blue);box-shadow:0 8px 24px rgba(16,25,53,.15);display:flex;gap:8px;align-items:center}
+.tag .dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.2)}
+.sec{padding:48px 0}
+.sec.deep{background:var(--prussian-blue);color:var(--azure-mist)}
+.sec.deep .muted{color:#b4bad3}
+.steps{display:grid;gap:14px;margin-top:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:22px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step b{font:600 22px var(--display);color:var(--primary);min-width:34px}
+.sec.deep .card{background:#172044;border-color:#33407a}
+.pull{font:400 26px/1.3 var(--script);color:var(--thistle);margin-top:14px;max-width:24ch}
+/* pages */
+.page{padding:26px 0 40px}
+.page>.wrap>header{margin-bottom:22px}
+.page header p{margin-top:8px;max-width:56ch}
+.grid2{display:grid;gap:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;cursor:pointer;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+fieldset{border:0;padding:0;margin:0 0 20px}
+legend{font:600 15px var(--display);margin-bottom:10px;padding:0}
+input[type=text],input[type=email],input[type=password],select,textarea{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid var(--line);background:var(--surface)}
+label{display:block;font-weight:600;font-size:14px;margin:0 0 5px}
+.field{margin-bottom:14px}
+.note{background:var(--soft);border-radius:16px;padding:12px 16px;font-size:14px;display:flex;gap:10px}
+.cloth{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.pc{position:relative;border:2px solid var(--line);background:var(--surface);border-radius:20px;padding:10px;text-align:left;cursor:pointer;display:block;width:100%}
+.pc[aria-pressed="true"]{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary)}
+.pc .th{aspect-ratio:1;border-radius:14px;background:var(--soft);display:grid;place-items:center;overflow:hidden}
+.pc .th svg{width:62%}.pc .th img{width:100%;height:100%;object-fit:cover}
+.pc b{display:block;font-size:14px;margin-top:8px;line-height:1.3}
+.pc small{color:var(--muted)}
+.pc .x{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;border:0;background:var(--surface);cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.res{display:grid;gap:18px}
+.look{background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden;display:grid}
+.look .fig{background:linear-gradient(170deg,var(--thistle),#b9a9cf);display:grid;place-items:end center;padding:20px 20px 0}
+.look .fig svg{width:min(200px,60%)}
+.look .txt{padding:22px;display:grid;gap:12px;align-content:start}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font:500 12px var(--mono);background:var(--soft);border-radius:999px;padding:4px 10px}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.tabs{display:flex;background:var(--soft);padding:4px;border-radius:999px;margin-bottom:18px}
+.tabs button{flex:1;border:0;background:none;padding:10px;border-radius:999px;cursor:pointer;font-weight:600}
+.tabs button[aria-selected="true"]{background:var(--surface);box-shadow:0 1px 4px rgba(16,25,53,.2)}
+.plan{display:grid;gap:12px}
+.plan.best{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.plan.best .btn{background:var(--on-primary);color:var(--primary)}
+.plan ul{margin:0;padding-left:20px}
+.empty{border:2px dashed var(--line);border-radius:24px;padding:40px 20px;text-align:center}
+.empty h3{margin-bottom:6px}
+.up{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.bn .dsk{display:none}
+.cl{background:var(--soft);border-radius:18px;padding:14px;display:grid;gap:8px}
+.cl-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.mini{border:1px solid var(--line);background:var(--surface);border-radius:14px;padding:8px;text-align:left;cursor:pointer;display:grid;gap:2px}
+.mini span svg{width:34px}.mini b{font-size:13px;line-height:1.25}.mini small{color:var(--muted)}
+.prod{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:12px;display:grid;gap:8px;align-content:start}
+.prod .th{aspect-ratio:1;border-radius:14px;background:var(--soft);display:grid;place-items:center}.prod .th svg{width:56%}
+.store{font:500 12px var(--mono);color:var(--ok)}
+/* chat */
+.fab{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:25;border:0;border-radius:999px;background:var(--prussian-blue);color:#fff;padding:12px 18px;font-weight:600;cursor:pointer;box-shadow:0 8px 24px rgba(16,25,53,.4)}
+.chat{position:fixed;right:12px;left:12px;bottom:calc(140px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 50px rgba(16,25,53,.35);display:flex;flex-direction:column;max-height:60vh}
+.chat[hidden]{display:none}
+.chat header{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font:600 16px var(--display)}
+.msgs{padding:14px;overflow:auto;display:grid;gap:8px;flex:1}
+.m{padding:9px 13px;border-radius:16px;max-width:85%;font-size:14px}
+.m.b{background:var(--soft)}.m.u{background:var(--primary);color:var(--on-primary);justify-self:end}
+.chat form{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(150px + env(safe-area-inset-bottom,0px));background:var(--prussian-blue);color:#fff;padding:10px 18px;border-radius:999px;z-index:40;font-size:14px}
+footer.f{padding:28px 0 12px;text-align:center;font-size:13px}
+/* tablet */
+@media (min-width:720px){
+ .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center}
+ .steps{grid-template-columns:repeat(3,1fr)}
+ .cloth{grid-template-columns:repeat(3,1fr)}
+ .grid2{grid-template-columns:1fr 1fr}
+ .look{grid-template-columns:240px 1fr}
+ .look .fig{padding-top:24px}
+ .chat{left:auto;width:380px}
+}
+/* laptop */
+@media (min-width:1000px){
+ body{padding-bottom:0}
+ .bn{display:none}
+ .dn{display:flex}
+ .wrap{padding:0 32px}
+ .hero{padding:64px 0 80px}
+ .cloth{grid-template-columns:repeat(4,1fr)}
+ .sty{display:grid;grid-template-columns:380px 1fr;gap:28px;align-items:start}
+ .sty .stick{position:sticky;top:84px}
+ .fab{bottom:24px}.chat{bottom:84px}.toast{bottom:30px}
+ .look{grid-template-columns:280px 1fr}
+ .cards3{grid-template-columns:repeat(3,1fr)!important}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <button class="logo" data-go="welcome" aria-label="WRAIRE Look, pronounced rare. Go to welcome">WRAIRE<i>Look</i></button>
+ <nav class="dn" id="dn" aria-label="Main"></nav>
+ <button class="tbtn" id="theme" aria-label="Switch light or dark theme">Theme</button>
+</div></header>
+<main id="app"></main>
+<nav class="bn" id="bn" aria-label="Main"></nav>
+<button class="fab" id="fab" aria-expanded="false">Ask WRAIRE</button>
+<section class="chat" id="chat" hidden aria-label="Help chat">
+ <header>Ask WRAIRE <button class="tbtn" id="cx">Close</button></header>
+ <div class="msgs" id="msgs"><div class="m b">Hi! Ask me how to add clothes, style an outfit or save a look.</div></div>
+ <form id="cf"><input type="text" id="ci" placeholder="Type your question" aria-label="Your question"><button class="btn sm">Send</button></form>
+</section>
+
+<script>
+const CATS={top:"Top",bottom:"Skirt or trousers",dress:"Dress",layer:"Cardigan or jacket",scarf:"Head wrap or scarf",shoes:"Shoes"};
+const OCC={church:["Church",3],work:["Work",2],event:["Event",3],casual:["Casual",1]};
+const NAV=[["home","Home"],["style","Style"],["wardrobe","Wardrobe"],["saved","Saved"],["shop","Shop"],["plans","Plans","dsk"]];
+let uid=0;const mk=(name,cat,color,form,img)=>({id:++uid,name,cat,color,form,img});
+const S={name:"",in:false,occ:"church",look:"traditional",notes:"",sel:new Set(),res:null,tab:"in",billing:"monthly",wr:[
+ mk("Cream lace blouse","top","#EFE6D8",3),mk("Plum satin top","top","#5E3B73",3),mk("White cotton shirt","top","#F4F1F7",2),
+ mk("Navy wide-leg trousers","bottom","#1D2A5B",2),mk("Olive maxi skirt","bottom","#6E7A4F",2),mk("Ankara print skirt","bottom","#B5622B",3),
+ mk("Emerald maxi dress","dress","#1F5A3A",3),mk("Lilac chiffon dress","dress","#B9A4DE",3),
+ mk("Oatmeal cardigan","layer","#CDB99C",1),mk("Grey blazer","layer","#8A8794",2),
+ mk("Gold head wrap","scarf","#C9A24B",3),mk("Ivory scarf","scarf","#F3EEE4",2),mk("Black flats","shoes","#1E1B22",2),mk("Nude heels","shoes","#D8B9A0",3)],
+ saved:[]};S.shopCat='all';S.near='idle';S.stab='online';
+const KEY='wraire:v1';
+function persist(){try{localStorage.setItem(KEY,JSON.stringify({name:S.name,in:S.in,wr:S.wr,saved:S.saved,occ:S.occ,look:S.look}))}catch(e){S.full=true}}
+(function load(){try{const d=JSON.parse(localStorage.getItem(KEY)||'null');if(d){S.name=d.name||'';S.in=!!d.in;if(Array.isArray(d.wr))S.wr=d.wr;if(Array.isArray(d.saved))S.saved=d.saved;S.occ=d.occ||S.occ;S.look=d.look||S.look;uid=Math.max(uid,0,...S.wr.map(i=>i.id))}}catch(e){}})();
+const $=s=>document.querySelector(s);
+const P={top:"M30 22 L42 16 Q50 26 58 16 L70 22 L86 44 L74 52 L70 46 L70 86 L30 86 L30 46 L26 52 L14 44Z",bottom:"M34 18 L66 18 L88 88 L12 88Z",dress:"M38 12 L62 12 L66 40 L88 90 L12 90 L34 40Z",layer:"M28 18 L42 14 L46 88 L28 88 L28 44 L14 52 L8 40Z M72 18 L58 14 L54 88 L72 88 L72 44 L86 52 L92 40Z",scarf:"M50 14C20 14 14 50 22 66C30 84 42 88 50 88C58 88 70 84 78 66C86 50 80 14 50 14Z",shoes:"M10 60L40 56L50 66L90 66L90 78L10 78Z"};
+const ico=(c,col)=>`<svg viewBox="0 0 100 100" aria-hidden="true"><path d="${P[c]}" fill="${col}" stroke="rgba(0,0,0,.22)" stroke-width="2"/></svg>`;
+function fig(o){const k=(x,d)=>o[x]||d,sk="#B98B73";
+ const base=o.dress?`<path d="M66 128Q100 118 134 128L152 335H48Z" fill="${o.dress}"/>`:
+  `<path d="M62 206L138 206L154 335H46Z" fill="${k("bottom","#444")}"/><path d="M66 128Q100 118 134 128L140 214H60Z" fill="${k("top","#ddd")}"/>`;
+ const arms=c=>`<path d="M66 128L48 232L64 238L80 150Z M134 128L152 232L136 238L120 150Z" fill="${c}"/>`;
+ const lay=o.layer?`<path d="M66 126L86 124L84 335H46Z M134 126L114 124L116 335H154Z" fill="${o.layer}" opacity=".96"/>${arms(o.layer)}`:arms(o.dress||k("top","#ddd"));
+ return `<svg viewBox="0 0 200 360" role="img" aria-label="Outfit illustration"><path d="M100 14C68 14 54 44 60 78C64 106 82 120 100 124C118 120 136 106 140 78C146 44 132 14 100 14Z" fill="${k("scarf","#C9A24B")}"/><ellipse cx="100" cy="68" rx="20" ry="27" fill="${sk}"/><rect x="92" y="90" width="16" height="34" fill="${sk}"/>${base}${lay}<ellipse cx="78" cy="346" rx="20" ry="8" fill="${k("shoes","#222")}"/><ellipse cx="122" cy="346" rx="20" ry="8" fill="${k("shoes","#222")}"/></svg>`}
+const thumb=i=>i.img?`<img src="${i.img}" alt="${i.name}">`:ico(i.cat,i.color);
+const by=c=>S.wr.filter(i=>i.cat==c);
+const pk=a=>a[Math.floor(Math.random()*a.length)];
+const toast=t=>{const d=document.createElement("div");d.className="toast";d.setAttribute("role","status");d.textContent=t;document.body.appendChild(d);setTimeout(()=>d.remove(),2200)};
+
+/* styling logic (prototype rules; real engine lives in apps/web/server/styling) */
+function gen(){
+ const pool=S.sel.size?S.wr.filter(i=>S.sel.has(i.id)):S.wr,g=c=>pool.filter(i=>i.cat==c);
+ const tgt=OCC[S.occ][1],best=[];
+ for(let n=0;n<50;n++){
+  const p={},dress=g("dress").length&&(!g("top").length||!g("bottom").length||Math.random()<.4);
+  if(dress)p.dress=pk(g("dress"));else{if(g("top").length)p.top=pk(g("top"));if(g("bottom").length)p.bottom=pk(g("bottom"))}
+  if(!p.dress&&!(p.top&&p.bottom))continue;
+  if(g("layer").length&&(S.occ!="casual"||Math.random()<.4))p.layer=pk(g("layer"));
+  if(g("scarf").length)p.scarf=pk(g("scarf"));if(g("shoes").length)p.shoes=pk(g("shoes"));
+  const v=Object.values(p),key=v.map(x=>x.id).sort().join();
+  let sc=-v.reduce((a,x)=>a+Math.abs(x.form-tgt),0)+Math.random();
+  if(S.res&&S.res.key==key)sc-=9;best.push({p,key,sc})}
+ if(!best.length)return null;best.sort((a,b)=>b.sc-a.sc);const r=best[0];
+ const names=Object.values(r.p).map(x=>x.name.toLowerCase());
+ const why={church:"Covered shoulders, a long line and a soft head covering suit a service.",work:"Structured pieces and an even colour balance keep it professional and comfortable.",event:"A richer fabric and a layer add presence while keeping coverage.",casual:"Relaxed pieces with a light layer stay easy and covered."}[S.occ];
+ const tr=S.look=="traditional"?"A head wrap adds a traditional finish.":"Clean lines give it an English-style finish.";
+ return{key:r.key,p:r.p,occ:S.occ,look:S.look,text:`${why} ${tr} Built only from ${names.length} pieces you already own.`}}
+
+/* views */
+const V={};
+V.welcome=()=>`<section class="hero"><div class="wrap"><div>
+ <h1>Rare looks from the clothes you already own.</h1>
+ <p class="lead">Add what’s in your wardrobe. Pick an occasion. WRAIRE Look builds modest, covered outfits without making you buy a thing.</p>
+ <div class="cta"><button class="btn" data-go="${S.in?"home":"account"}">Get started</button><a class="btn alt" href="#how" data-scroll>See how it works</a></div></div>
+ <div class="stage"><div class="arch">${fig({dress:"#564787",layer:"#DBCBD8",scarf:"#17301C",shoes:"#101935"})}</div>
+ <div class="tag" style="left:-6px;top:12%"><span class="dot" style="background:#564787"></span>Your plum dress</div>
+ <div class="tag" style="right:-6px;top:46%"><span class="dot" style="background:#DBCBD8"></span>Your cardigan</div></div></div></section>
+ <section class="sec" id="how"><div class="wrap"><h2>Three steps to a look you’ll wear</h2>
+ <div class="steps"><div class="card step"><b>1</b><div><h3>Add your clothes</h3><p class="muted">Take or upload photos of pieces you own.</p></div></div>
+ <div class="card step"><b>2</b><div><h3>Choose the occasion</h3><p class="muted">Church, work or an event, in a traditional or English look.</p></div></div>
+ <div class="card step"><b>3</b><div><h3>Get a modest outfit</h3><p class="muted">See the look, why it works, and save it.</p></div></div></div></div></section>
+ <section class="sec deep"><div class="wrap grid2"><div><h2>Modest by design</h2><p class="pull">Elegant. Covered. Yours.</p></div>
+ <p class="muted">Every suggestion follows the WRAIRE modesty guidelines for sleeves, hems and layers. Suggestions to buy anything extra are always optional, and your wardrobe photos stay private to you.</p></div></section>
+ <footer class="f muted"><div class="wrap">WRAIRE Look (say “rare”)</div></footer>`;
+V.account=()=>`<div class="page"><div class="wrap" style="max-width:520px"><header><h1 style="font-size:clamp(30px,7vw,44px)">${S.tab=="in"?"Welcome back":"Create your account"}</h1></header>
+ <div class="tabs" role="tablist"><button role="tab" aria-selected="${S.tab=="in"}" data-tab="in">Sign in</button><button role="tab" aria-selected="${S.tab=="up"}" data-tab="up">Create account</button></div>
+ <form class="card" id="af">${S.tab=="up"?`<div class="field"><label for="nm">First name</label><input type="text" id="nm" autocomplete="given-name" placeholder="What should we call you?"></div>`:""}
+ <div class="field"><label for="em">Email</label><input type="email" id="em" autocomplete="email" required></div>
+ <div class="field"><label for="pw">Password</label><input type="password" id="pw" required></div>
+ <button class="btn full">${S.tab=="in"?"Sign in":"Create account"}</button>
+ ${S.tab=="up"?`<p class="muted" style="margin-top:12px;font-size:14px">Styling details are optional. <button type="button" class="tbtn" data-go="home">Skip for now</button></p>`:""}</form></div></div>`;
+V.home=()=>`<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">${S.name?`Hello, ${S.name}`:"Hello"}</h1><p class="muted">Ready to style something from your wardrobe?</p></header>
+ <div class="grid2 cards3" style="grid-template-columns:1fr">
+ <div class="card" style="background:var(--primary);color:var(--on-primary)"><h2>Style an outfit</h2><p style="margin:8px 0 18px">Choose an occasion and let WRAIRE do the matching.</p><button class="btn" style="background:var(--on-primary);color:var(--primary)" data-go="style">Start styling</button></div>
+ <div class="card"><h3>My wardrobe</h3><p class="muted" style="margin:6px 0 14px">${S.wr.length} pieces added</p><button class="btn alt sm" data-go="wardrobe">Open wardrobe</button></div>
+ <div class="card"><h3>Saved outfits</h3><p class="muted" style="margin:6px 0 14px">${S.saved.length} saved</p><button class="btn alt sm" data-go="saved">View saved</button></div>
+ <div class="card" style="background:var(--prussian-blue);color:var(--azure-mist)"><h3>Plans</h3><p style="margin:6px 0 14px;color:#b4bad3">See what a subscription will include.</p><button class="btn sm" style="background:var(--thistle);color:var(--prussian-blue)" data-go="plans">View plans</button></div></div><p class="muted" style="margin-top:22px;font-size:14px">Your wardrobe and saved outfits are kept on this device. <button class="tbtn" data-clear>Clear my saved data</button></p></div></div>`;
+const chip=(k,l,on,a)=>`<button class="chip" aria-pressed="${on}" data-${a}="${k}">${l}</button>`;
+function lookCard(r,mode,i){return `<article class="look"><div class="fig">${fig(Object.fromEntries(Object.entries(r.p).map(([k,v])=>[k,v.color])))}</div>
+ <div class="txt"><h3>${OCC[r.occ][0]} look, ${r.look=="traditional"?"traditional":"English"} style</h3><p>${r.text}</p>
+ <div class="pills">${Object.values(r.p).map(x=>`<span class="pill">${x.name}</span>`).join("")}</div>
+ ${mode=="res"?complete(r):""}<div class="row">${mode=="res"?`<button class="btn sm" data-save>${S.saved.some(s=>s.key==r.key)?"Saved":"Save outfit"}</button><button class="btn alt sm" data-again>Try another</button>`:`<button class="btn alt sm" data-rm="${i}">Remove</button>`}</div></div></article>`}
+V.style=()=>`<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">Style an outfit</h1><p class="muted">Tell us the occasion, then pick pieces or let us choose from everything you own.</p></header>
+ <div class="sty"><div class="stick card"><fieldset><legend>Occasion</legend><div class="chips">${Object.entries(OCC).map(([k,v])=>chip(k,v[0],S.occ==k,"occ")).join("")}</div></fieldset>
+ <fieldset><legend>Style</legend><div class="chips">${chip("traditional","Traditional",S.look=="traditional","look")}${chip("english","English",S.look=="english","look")}</div></fieldset>
+ <div class="field"><label for="nt">Outfit details (optional)</label><textarea id="nt" rows="2" placeholder="e.g. Sunday service, long sleeves">${S.notes}</textarea></div>
+ <div class="note">Every look follows the modesty guidelines: covered shoulders, relaxed fit and longer hems.</div></div>
+ <div style="margin-top:22px" class="sty-r"><h2 style="font-size:22px;margin-bottom:6px">Choose from your wardrobe</h2><p class="muted" style="margin-bottom:14px">${S.sel.size?S.sel.size+" selected":"Nothing selected, so we’ll use everything."}</p>
+ <div class="cloth">${S.wr.map(i=>`<button class="pc" aria-pressed="${S.sel.has(i.id)}" data-sel="${i.id}"><span class="th">${thumb(i)}</span><b>${i.name}</b></button>`).join("")}</div>
+ <div class="row" style="margin-top:18px"><button class="btn" data-style>Style my outfit</button><button class="btn alt" data-go="wardrobe">Add clothes</button></div>
+ <div class="res" id="res" style="margin-top:24px" aria-live="polite">${S.res?lookCard(S.res,"res"):""}</div></div></div></div></div>`;
+V.wardrobe=()=>`<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">My wardrobe</h1><p class="muted">Saved on this device only.</p></header>
+ <form class="card" id="wf" style="margin-bottom:22px"><h3 style="margin-bottom:14px">Add clothes</h3><div class="grid2"><div class="field"><label for="wn">Name</label><input type="text" id="wn" placeholder="e.g. Blue Ankara skirt"></div>
+ <div class="field"><label for="wc">Type</label><select id="wc">${Object.entries(CATS).map(([k,v])=>`<option value="${k}">${v}</option>`).join("")}</select></div></div>
+ <div class="up"><label class="btn alt sm" style="margin:0;cursor:pointer">Take or upload photo<input type="file" id="wp" accept="image/*" capture="environment" hidden></label><span class="muted" id="wfn" style="font-size:14px">No photo chosen</span>
+ <label style="margin:0">Colour <input type="color" id="wk" value="#564787" style="vertical-align:middle"></label><button class="btn sm">Add to wardrobe</button></div></form>
+ ${S.wr.length?`<div class="cloth">${S.wr.map(i=>`<div class="pc" style="cursor:default"><span class="th">${thumb(i)}</span><b>${i.name}</b><small>${CATS[i.cat]}</small><button class="x" data-del="${i.id}" aria-label="Remove ${i.name}">×</button></div>`).join("")}</div>`:`<div class="empty"><h3>Your wardrobe is empty</h3><p class="muted">Add your first piece above.</p></div>`}</div></div>`;
+V.saved=()=>`<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">Saved outfits</h1><p class="muted">Looks you’ve kept to wear again.</p></header>
+ ${S.saved.length?`<div class="res">${S.saved.map((r,i)=>lookCard(r,"sv",i)).join("")}</div>`:`<div class="empty"><h3>No saved outfits yet</h3><p class="muted" style="margin-bottom:14px">Style an outfit and choose “Save outfit”.</p><button class="btn" data-go="style">Style an outfit</button></div>`}</div></div>`;
+V.plans=()=>`<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">Plans</h1><p class="muted">Pricing and benefits will be confirmed before launch.</p></header>
+ <div class="tabs" role="tablist" style="max-width:340px"><button role="tab" aria-selected="${S.billing=="monthly"}" data-bill="monthly">Monthly</button><button role="tab" aria-selected="${S.billing=="yearly"}" data-bill="yearly">Yearly</button></div>
+ <div class="grid2"><div class="card plan"><h2>Free</h2><p class="muted">Start with the essentials.</p><ul><li>Add your wardrobe</li><li>Style outfits by occasion</li><li>Save favourites</li></ul><button class="btn alt" data-sub>Keep free</button></div>
+ <div class="card plan best"><h2>${S.billing=="monthly"?"Monthly":"Yearly"} plan</h2><p>Price to be announced.</p><ul><li>Everything in Free</li><li>More looks each day</li><li>Priority styling help</li></ul><button class="btn" data-sub>Subscribe</button></div></div></div></div>`;
+
+const SHOP=[{name:'Soft jersey head wrap',cat:'scarf',color:'#564787',store:'Amazon'},{name:'Silk-feel scarf',cat:'scarf',color:'#DBCBD8',store:'Shein'},{name:'Long open cardigan',cat:'layer',color:'#CDB99C',store:'Amazon'},{name:'Lightweight duster jacket',cat:'layer',color:'#2B3A5C',store:'Temu'},{name:'Block-heel sandals',cat:'shoes',color:'#D8B9A0',store:'Temu'},{name:'Comfort flats',cat:'shoes',color:'#1E1B22',store:'Amazon'},{name:'Pleated maxi skirt',cat:'bottom',color:'#6E7A4F',store:'Shein'},{name:'Long-sleeve lace blouse',cat:'top',color:'#EFE6D8',store:'Amazon'}];
+function complete(r){const need=['scarf','layer','shoes'].filter(c=>!r.p[c]);if(!need.length)return'';
+ return `<div class="cl"><b>Complete this look</b><p class="muted" style="font-size:14px">Optional pieces that would finish this outfit.</p><div class="cl-row">${need.map(c=>{const s=SHOP.find(x=>x.cat==c);return s?`<button class="mini" data-shop="${c}"><span>${ico(c,s.color)}</span><b>${s.name}</b><small>${s.store}</small></button>`:''}).join('')}</div></div>`}
+V.shop=()=>{const items=SHOP.filter(s=>S.shopCat=='all'||s.cat==S.shopCat);
+ const msg={idle:'',asking:'Waiting for your permission…',found:'Location received. Shops will be listed here once the nearby search is connected.',denied:'Location is blocked. Type your town or postcode instead.',error:'We couldn’t get your location. Type your town or postcode instead.',unsupported:'This browser can’t share location. Type your town or postcode instead.',manual:'Nearby search for “'+(S.place||'')+'” will work once the backend is connected.'}[S.near];
+ const near=`<div class="card" style="max-width:560px"><h3>Shops near you</h3><p class="muted" style="margin:6px 0 14px">We use your location once to search. It isn’t saved.</p><button class="btn" data-near>Use my location</button><form id="nf" class="up" style="margin-top:14px"><input type="text" id="np" placeholder="Or type your town or postcode" aria-label="Town or postcode" style="flex:1;min-width:180px"><button class="btn alt sm">Search</button></form><p class="note" style="margin-top:14px" role="status">${msg||'Nothing searched yet.'}</p></div>`;
+ const cards=items.map(s=>`<div class="prod"><span class="th">${ico(s.cat,s.color)}</span><b>${s.name}</b><span class="store">${s.store} (sample)</span><button class="btn alt sm" data-store>View at store</button></div>`).join('');
+ const online=`<div class="chips" style="margin-bottom:14px">${chip('all','All',S.shopCat=='all','sc')}${Object.entries(CATS).map(([k,v])=>chip(k,v,S.shopCat==k,'sc')).join('')}</div><div class="note" style="margin-bottom:18px">Sample items. When partner links go live, we may earn a commission if you buy, at no extra cost to you.</div>${items.length?`<div class="cloth">${cards}</div>`:'<div class="empty"><h3>Nothing here yet</h3></div>'}`;
+ return `<div class="page"><div class="wrap"><header><h1 style="font-size:clamp(30px,7vw,48px)">Shop</h1><p class="muted">Optional extras to finish a look. You never need to buy anything.</p></header><div class="tabs" role="tablist" style="max-width:360px"><button role="tab" aria-selected="${S.stab!='near'}" data-stab="online">Online</button><button role="tab" aria-selected="${S.stab=='near'}" data-stab="near">Near me</button></div>${S.stab=='near'?near:online}</div></div>`};
+/* shell */
+function nav(){const cur=route();const h=NAV.map(([k,l,x])=>`<button class="nb ${x||''}" data-go="${k}" ${cur==k?'aria-current="page"':""}>${l}</button>`).join("");
+ $("#dn").innerHTML=h;$("#bn").innerHTML=h;$("#bn").style.display=(cur=="welcome"||cur=="account")?"none":"";$("#dn").style.visibility=(cur=="welcome"||cur=="account")?"hidden":"visible"}
+const route=()=>{const h=location.hash.slice(1);return V[h]?h:"welcome"};
+function render(){const r=route();$("#app").innerHTML=V[r]();nav();persist();if(S.full){S.full=false;toast('Storage is full. Remove some photos.')}}
+function go(r){if(location.hash=="#"+r)render();else location.hash=r;window.scrollTo(0,0)}
+addEventListener("hashchange",()=>{render();window.scrollTo(0,0)});
+document.addEventListener("click",e=>{const t=e.target.closest("button,a");if(!t)return;const d=t.dataset;
+ if(d.go){go(d.go);return}
+ if(d.scroll!==undefined){e.preventDefault();document.getElementById("how").scrollIntoView({behavior:"smooth"});return}
+ if(d.tab){S.tab=d.tab;render();return}
+ if(d.occ){S.occ=d.occ;keep();render();return}
+ if(d.look){S.look=d.look;keep();render();return}
+ if(d.sel){const n=+d.sel;S.sel.has(n)?S.sel.delete(n):S.sel.add(n);keep();render();return}
+ if("style" in d){keep();if(S.wr.length<3){toast("Add a few more pieces first");return}S.res=gen();render();if(!S.res)toast("Add a top and bottom, or a dress");else $("#res").scrollIntoView({behavior:"smooth",block:"nearest"});return}
+ if("again" in d){S.res=gen();render();return}
+ if("save" in d){if(!S.saved.some(s=>s.key==S.res.key))S.saved.push(S.res);render();toast("Outfit saved");return}
+ if(d.rm){S.saved.splice(+d.rm,1);render();return}
+ if(d.del){S.wr=S.wr.filter(i=>i.id!=+d.del);S.sel.delete(+d.del);S.res=null;render();return}
+ if(d.bill){S.billing=d.bill;render();return}
+ if("sub" in d){toast("Plans open soon");return}
+ if(d.shop){S.shopCat=d.shop;S.stab='online';go('shop');return}
+ if(d.sc){S.shopCat=d.sc;render();return}
+ if(d.stab){S.stab=d.stab;render();return}
+ if("near" in d){locate();return}
+ if("store" in d){toast('Store links coming soon');return}
+ if("clear" in d){try{localStorage.removeItem(KEY)}catch(x){}location.reload();return}});
+const keep=()=>{const n=$("#nt");if(n)S.notes=n.value};
+const shrink=f=>new Promise((ok,no)=>{const r=new FileReader();r.onerror=no;r.onload=()=>{const im=new Image();im.onerror=no;im.onload=()=>{const k=Math.min(1,360/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);ok(c.toDataURL('image/jpeg',.72))};im.src=r.result};r.readAsDataURL(f)});
+function locate(){if(!navigator.geolocation){S.near='unsupported';render();return}S.near='asking';render();
+ navigator.geolocation.getCurrentPosition(()=>{S.near='found';render()},e=>{S.near=e.code==1?'denied':'error';render()},{timeout:10000,maximumAge:300000})}
+document.addEventListener("submit",async e=>{e.preventDefault();
+ if(e.target.id=="af"){const n=$("#nm");if(n&&n.value.trim())S.name=n.value.trim();else if(!S.name){const m=$("#em").value.split("@")[0];S.name=m.charAt(0).toUpperCase()+m.slice(1)}S.in=true;go("home")}
+ if(e.target.id=="nf"){const v=$("#np").value.trim();if(v){S.near='manual';S.place=v;render()}return}
+ if(e.target.id=="wf"){const nm=$("#wn").value.trim();if(!nm){$("#wn").focus();toast("Name your piece first");return}
+  const f=$("#wp").files[0];const img=f?await shrink(f).catch(()=>null):null;S.wr.push(mk(nm,$("#wc").value,$("#wk").value,2,img));render();toast("Added to wardrobe")}});
+document.addEventListener("change",e=>{if(e.target.id=="wp")$("#wfn").textContent=e.target.files[0]?e.target.files[0].name:"No photo chosen"});
+/* theme */
+$("#theme").onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme=="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=dark?"light":"dark"};
+/* chat */
+const ans=q=>{q=q.toLowerCase();return/upload|photo|add/.test(q)?"Open Wardrobe, choose “Take or upload photo”, name the piece and add it.":/save/.test(q)?"After styling, choose “Save outfit”. Find it later under Saved.":/modest/.test(q)?"Every look follows our modesty guidelines: covered shoulders, relaxed fit and longer hems.":/plan|price|pay|subscri/.test(q)?"Plans are opening soon. Open Plans to see what’s planned.":/buy|shop/.test(q)?"You never need to buy anything. We style from what you own.":"I can help with adding clothes, styling, saving looks and plans. Try asking about one of those."};
+const cs=o=>{$("#chat").hidden=!o;$("#fab").setAttribute("aria-expanded",o);if(o)$("#ci").focus()};
+$("#fab").onclick=()=>cs($("#chat").hidden);$("#cx").onclick=()=>cs(false);
+$("#cf").onsubmit=e=>{e.preventDefault();const i=$("#ci"),v=i.value.trim();if(!v)return;const m=$("#msgs");
+ m.insertAdjacentHTML("beforeend",`<div class="m u"></div><div class="m b"></div>`);const k=m.children;k[k.length-2].textContent=v;k[k.length-1].textContent=ans(v);i.value="";m.scrollTop=m.scrollHeight};
+render();
+</script>
+</body>
+</html>
